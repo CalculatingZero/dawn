@@ -28,7 +28,7 @@ import {
   
   const MyFirstWeb3Island = () => {
     return (
-      <ThirdwebProvider activeChain={11155111}>
+      <ThirdwebProvider desiredChainId={ChainId.Polygon}>
         <ConnectWallet />
         <RenderNFT />
       </ThirdwebProvider>
