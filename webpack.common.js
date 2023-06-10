@@ -2,6 +2,9 @@ const path = require("path");
 const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
 
 function normalizeName(name) {
+  if (typeof name !== "string") {
+    name = String(name);
+  }
     return name
       .replace(/node_modules/g, "nodemodules")
       .replace(/[\-_.|]+/g, " ")
